@@ -24,40 +24,45 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-source-airtable',
+      resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: 'keyv9U7RZRkQmjJGj',
-        baseId: 'app8fDw1VfF3RiVyi',
-        tableName: 'robots',
-        tableView: 'published',
-        queryName: ''
+        apiKey: `keyv9U7RZRkQmjJGj`, // may instead specify via env, see below
+        tables: [
+          {
+            baseId: `app8fDw1VfF3RiVyi`,
+            tableName: `robots`,
+            // tableView: `Grid view`, // optional
+            // mapping: { 'COLUMN NAME': `VALUE_FORMAT` },
+            // tableLinks: [`ARRAY_OF_COLUMN_NAMES`],
+          }
+        ]
       }
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-typescript',
     'gatsby-transformer-yaml',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'projects',
-        path: `${__dirname}/content/projects`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'config',
-        path: `${__dirname}/config`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'projects',
+    //     path: `${__dirname}/content/projects`,
+    //   },
+    // },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'config',
+    //     path: `${__dirname}/config`,
+    //   },
+    // },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'images',
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
     {
       resolve: 'gatsby-source-instagram',
       options: {

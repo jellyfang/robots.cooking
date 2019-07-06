@@ -42,47 +42,59 @@ const Description = styled(animated.div)`
 const PButton = styled(Button)<{ color: string }>`
   background: ${props => (props.color === 'white' ? 'black' : props.color)};
   color: ${props => readableColor(props.color === 'white' ? 'black' : props.color)};
-`
 
-type PageProps = {
-  data: {
-    project: {
-      title_detail: string
-      color: string
-      category: string
-      desc: string
-      slug: string
-      parent: {
-        modifiedTime: string
-        birthTime: string
-      }
-      cover: {
-        childImageSharp: {
-          resize: {
-            src: string
-          }
-        }
+
+  type PageProps = {
+    data: {
+      project: {
+        title: string
+        slug: string
+        author: string
+        PostMarkdown: string
+        date: string
       }
     }
-    images: {
-      nodes: {
-        name: string
-        childImageSharp: {
-          fluid: {
-            aspectRatio: number
-            src: string
-            srcSet: string
-            sizes: string
-            base64: string
-            tracedSVG: string
-            srcWebp: string
-            srcSetWebp: string
-          }
-        }
-      }[]
-    }
-  }
-}
+  }  `
+
+// type PageProps = {
+//   data: {
+//     project: {
+//       title_detail: string
+//       color: string
+//       category: string
+//       desc: string
+//       slug: string
+//       parent: {
+//         modifiedTime: string
+//         birthTime: string
+//       }
+//       cover: {
+//         childImageSharp: {
+//           resize: {
+//             src: string
+//           }
+//         }
+//       }
+//     }
+//     images: {
+//       nodes: {
+//         name: string
+//         childImageSharp: {
+//           fluid: {
+//             aspectRatio: number
+//             src: string
+//             srcSet: string
+//             sizes: string
+//             base64: string
+//             tracedSVG: string
+//             srcWebp: string
+//             srcSetWebp: string
+//           }
+//         }
+//       }[]
+//     }
+//   }
+// }
 
 const Project: React.FunctionComponent<PageProps> = ({ data: { project, images } }) => {
   const categoryAnimation = useSpring({
@@ -134,34 +146,44 @@ export default Project
 export const query = graphql`
   query ProjectTemplate($slug: String!, $images: String!) {
     project: projectsYaml(slug: { eq: $slug }) {
-      title_detail
-      color
-      category
-      desc
       slug
-      parent {
-        ... on File {
-          modifiedTime
-          birthTime
-        }
-      }
-      cover {
-        childImageSharp {
-          resize(width: 1200, height: 675, quality: 80) {
-            src
-          }
-        }
-      }
-    }
-    images: allFile(filter: { relativePath: { regex: $images } }) {
-      nodes {
-        name
-        childImageSharp {
-          fluid(quality: 95, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+      title
     }
   }
 `
+
+
+// export const query = graphql`
+//   query ProjectTemplate($slug: String!, $images: String!) {
+//     project: projectsYaml(slug: { eq: $slug }) {
+//       title_detail
+//       color
+//       category
+//       desc
+//       slug
+//       parent {
+//         ... on File {
+//           modifiedTime
+//           birthTime
+//         }
+//       }
+//       cover {
+//         childImageSharp {
+//           resize(width: 1200, height: 675, quality: 80) {
+//             src
+//           }
+//         }
+//       }
+//     }
+//     images: allFile(filter: { relativePath: { regex: $images } }) {
+//       nodes {
+//         name
+//         childImageSharp {
+//           fluid(quality: 95, maxWidth: 1200) {
+//             ...GatsbyImageSharpFluid_withWebp
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
