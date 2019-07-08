@@ -1,32 +1,33 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
+
+export default ({ data }) => {
+  return (
+    <Layout>
+      <div>
+        <ul>
+          { data.allAirtable.nodes.map(node => (
+            <li key={node.recordId}>
+              <a href={node.data.slug}>{node.data.title}</a>
+            </li>
+          )) }
+        </ul>
+      </div>
+    </Layout>
+  )
+}
 
 export const query = graphql`
   {
     allAirtable(sort: {order: DESC, fields: data___date}) {
       nodes {
         data {
-          date
-          PublishingStatus
           slug
           title
-          author
         }
         recordId
       }
     }
   }
 `
-
-export default ({ data }) => (
-  <div>
-    <h1>robots</h1>
-    <ul>
-      { data.allAirtable.nodes.map(node => (
-        <li key={node.recordId}>
-          {node.data.title}
-        </li>
-      )) }
-    </ul>
-  </div>
-)

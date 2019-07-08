@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 exports.onCreateNode = ({ node }) => {
     if (node.internal.type === `Airtable`) {
         console.log(node.internal.type)
@@ -5,22 +7,28 @@ exports.onCreateNode = ({ node }) => {
 }
 
 exports.createPages = ({graphql, actions}) => {
+    const { createPage } = actions
     return graphql(`
       {
         allAirtable(sort: {order: DESC, fields: data___date}) {
-          nodes {
-            data {
-              date
-              PublishingStatus
-              slug
-              title
-              author
+          edges {
+            node {
+              data {
+                slug
+              }
             }
-            recordId
           }
         }
       }
     `).then(result => {
-        console.log(JSON.stringify(result, null, 4))
+        result.data.allAirtable.edges.forEach(({ node }) => {
+            createPage({
+                path: node.data.slug,
+                component: path.resolve(`./src/templates/blog-post.js`),
+                context: {
+                    slug: node.data.slug,
+                },
+            })
+        })
     })
 }
