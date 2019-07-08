@@ -1,6 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import unified from 'unified'
+import markdown from 'remark-parse'
+import html from 'remark-html'
 
 export default ({ data }) => {
     const post = data.airtable.data
@@ -10,7 +13,14 @@ export default ({ data }) => {
                 <h1>{post.title}</h1>
                 <h5>by {post.author} on {post.date}</h5>
                 <img src={post.image[0].url} />
-                <p>{post.PostMarkdown}</p>
+                <div
+                    className="blog-post-content"
+                    dangerouslySetInnerHTML={{
+                        __html: String(unified()
+                        .use(markdown)
+                        .use(html)
+                        .processSync(post.PostMarkdown))
+                    }} />
             </div>
         </Layout>
     )
