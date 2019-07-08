@@ -1,98 +1,46 @@
-require('dotenv').config({
-  path: `.env`,
-})
-
-const config = require('./config')
-
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
-
 module.exports = {
-  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
-    pathPrefix,
-    title: config.siteTitle,
-    titleAlt: config.siteTitleAlt,
-    description: config.siteDescription,
-    logo: config.siteLogo,
-    headline: config.siteHeadline,
-    siteLanguage: config.siteLanguage,
-    ogLanguage: config.ogLanguage,
-    author: config.author,
-    twitter: config.userTwitter,
-    facebook: config.ogSiteName,
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
   },
   plugins: [
     {
       resolve: `gatsby-source-airtable`,
       options: {
-        apiKey: `keyv9U7RZRkQmjJGj`, // may instead specify via env, see below
+        apiKey: `keyv9U7RZRkQmjJGj`,
         tables: [
           {
             baseId: `app8fDw1VfF3RiVyi`,
-            tableName: `robots`,
-            // tableView: `Grid view`, // optional
-            // mapping: { 'COLUMN NAME': `VALUE_FORMAT` },
-            // tableLinks: [`ARRAY_OF_COLUMN_NAMES`],
+            tableName: `robots`
           }
         ]
       }
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-typescript',
-    'gatsby-transformer-yaml',
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'projects',
-    //     path: `${__dirname}/content/projects`,
-    //   },
-    // },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'config',
-    //     path: `${__dirname}/config`,
-    //   },
-    // },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'images',
-    //     path: `${__dirname}/src/images`,
-    //   },
-    // },
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-source-instagram',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        access_token: process.env.ACCESS_TOKEN,
-        instagram_id: process.env.BUSINESS_ID,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        trackingId: config.googleAnalyticsID,
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'standalone',
-        icon: 'src/favicon.png',
-      },
-    },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-netlify',
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
