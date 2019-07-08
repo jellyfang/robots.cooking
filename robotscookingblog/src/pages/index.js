@@ -6,6 +6,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
+        <h1>showing robots cooking</h1>
         <ul>
           { data.allAirtable.nodes.map(node => (
             <li key={node.recordId}>
