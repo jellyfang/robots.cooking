@@ -4,16 +4,7 @@ import Layout from "../components/layout"
 
 export const query = graphql`
 {
-  allAirtable(
-    sort: {
-      fields: data___robots___data___postDate
-    }, 
-      filter: {
-        table: {
-          eq: "robots"
-        }
-      }
-    ) {
+  allAirtable(sort: {fields: data___robots___data___postDate}, filter: {table: {eq: "robots"}, data: {status: {eq: "published"}}}) {
       nodes {
         data {
           slug
@@ -29,7 +20,8 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>showing all robots</h1>
+        <img src="bender.gif" width="50%" />
+        <h1>showing all robots cooking</h1>
         <ul>
           { data.allAirtable.nodes.map(node => (
             <li key={node.recordId}>

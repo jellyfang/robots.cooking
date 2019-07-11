@@ -4,17 +4,19 @@ import Layout from "../components/layout"
 import unified from 'unified'
 import markdown from 'remark-parse'
 import html from 'remark-html'
+import ReactPlayer from 'react-player'
 
 export default ({ data }) => {
     const post = data.airtable.data
     return (
         <Layout>
             <div>
-                <h1>{post.title || ''}</h1>
-                <h2>{post.subtitle || ''}</h2>
-                <h5>{post.cuisine || ''} {post.location || ''}</h5>
-                {post.videos || ''}
-                {post.videos || ''}
+                <div class="videoWrapper">
+                    <ReactPlayer url={post.videos || ''} />
+                </div>
+                <h1 className="title">{post.title || ''}</h1>
+                <h2 className="subtitle">{post.subtitle || ''}</h2>
+                <h3 className="metadata">{post.cuisine || ''} in {post.location || ''}</h3>
                 {/* <img src={post.image[0].url || ''} /> */}
                 <div
                     className="blog-post-content"
@@ -24,6 +26,7 @@ export default ({ data }) => {
                         .use(html)
                         .processSync(post.content))
                     }} />
+                <ReactPlayer url={post.video2 || ''}  />
             </div>
         </Layout>
     )
@@ -57,7 +60,6 @@ export const query = graphql`
                 subtitle
                 video2
                 videos
-                views
                 website
               }
         }

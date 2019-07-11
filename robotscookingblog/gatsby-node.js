@@ -10,7 +10,7 @@ exports.createPages = ({graphql, actions}) => {
     const { createPage } = actions
     return graphql(`
     {
-      allAirtable(sort: {fields: data___robots___data___postDate}, filter: {table: {eq: "robots"}}) {
+      allAirtable(sort: {fields: data___robots___data___postDate}, filter: {table: {eq: "robots"}, data: {status: {eq: "published"}}}) {
         edges {
           node {
             data {
@@ -19,7 +19,7 @@ exports.createPages = ({graphql, actions}) => {
           }
         }
       }
-    }      
+    }    
     `).then(result => {
         result.data.allAirtable.edges.forEach(({ node }) => {
             createPage({

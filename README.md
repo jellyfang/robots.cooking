@@ -12,10 +12,13 @@
 
 - [x] setup airtable (1 day)
 - [x] setup gatsby (2 day)
-- [ ] react player
-- [ ] themes
+- [x] react player (0.5 day)
+- [x] css (0.5 day)
+- [ ] env variables
+- [ ] table linking
+- [ ] metatags
 - [ ] styled components
-- [ ] list all bots https://blog.usejournal.com/building-highly-performant-masonry-layouts-with-gatsby-js-54115acc3e72
+- [ ] bots directory https://blog.usejournal.com/building-highly-performant-masonry-layouts-with-gatsby-js-54115acc3e72
 - [ ] submit a bot
 - [ ] dynamic https://blog.hasura.io/building-a-dynamic-listing-web-app-with-pagination-and-dynamic-pages-using-gatsby-2ddee9ec2dc3/
 - [ ] netlify functions https://www.gatsbyjs.org/blog/2018-12-17-turning-the-static-dynamic/
