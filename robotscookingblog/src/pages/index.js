@@ -20,7 +20,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <img src="bender.gif" width="50%" />
+        <img src="src/images/bender.gif" width="50%" />
         <h1>showing all robots cooking</h1>
         <ul>
           { data.allAirtable.nodes.map(node => (
