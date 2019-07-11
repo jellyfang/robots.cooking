@@ -10,16 +10,19 @@ export default ({ data }) => {
     return (
         <Layout>
             <div>
-                <h1>{post.title}</h1>
-                <h5>by {post.author} on {post.date}</h5>
-                <img src={post.image[0].url} />
+                <h1>{post.title || ''}</h1>
+                <h2>{post.subtitle || ''}</h2>
+                <h5>{post.cuisine || ''} {post.location || ''}</h5>
+                {post.videos || ''}
+                {post.videos || ''}
+                {/* <img src={post.image[0].url || ''} /> */}
                 <div
                     className="blog-post-content"
                     dangerouslySetInnerHTML={{
                         __html: String(unified()
                         .use(markdown)
                         .use(html)
-                        .processSync(post.PostMarkdown))
+                        .processSync(post.content))
                     }} />
             </div>
         </Layout>
@@ -37,13 +40,26 @@ export const query = graphql`
         ) {
             data {
                 title
-                author
-                date(formatString: "MMMM DD, YYYY")
-                image {
-                    url
+                content
+                country
+                cuisine
+                email
+                images {
+                  url
                 }
-                PostMarkdown
-            }
+                location
+                postDate
+                robots {
+                  id
+                }
+                slug
+                status
+                subtitle
+                video2
+                videos
+                views
+                website
+              }
         }
     }
 `
