@@ -26,7 +26,9 @@ export default ({ data }) => {
                         .use(html)
                         .processSync(post.content))
                     }} />
-                <ReactPlayer url={post.video2 || ''}  />
+                <div class="videoWrapper2">
+                    <ReactPlayer url={post.video2 || ''}  />
+                </div>
             </div>
         </Layout>
     )
