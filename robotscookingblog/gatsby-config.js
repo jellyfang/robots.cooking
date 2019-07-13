@@ -23,6 +23,16 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Space Mono`,
+          `Roboto`,
+        ],
+        display: 'swap'
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
