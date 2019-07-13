@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import benderGif from "../images/bender.gif"
 
 export const query = graphql`
 {
@@ -20,7 +21,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <img src="src/images/bender.gif" width="50%" />
+        <img src={benderGif} alt="logo" width="50%" />
         <h1>showing all robots cooking</h1>
         <ul>
           { data.allAirtable.nodes.map(node => (
