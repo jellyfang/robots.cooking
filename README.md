@@ -14,7 +14,7 @@
 - [x] setup gatsby (2 day)
 - [x] react player (0.5 day)
 - [x] css (0.5 day)
-- [ ] env variables
+- [x] env variables
 - [ ] table linking
 - [ ] metatags
 - [ ] styled components
