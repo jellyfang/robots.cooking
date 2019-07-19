@@ -5,11 +5,15 @@ import unified from 'unified'
 import markdown from 'remark-parse'
 import html from 'remark-html'
 import ReactPlayer from 'react-player'
+import SEO from '../components/seo';
 
 export default ({ data }) => {
     const post = data.airtable.data
     return (
         <Layout>
+            <SEO
+                title={post.title}
+            />
             <div>
                 <div class="videoWrapper">
                     <ReactPlayer url={post.videos || ''} />

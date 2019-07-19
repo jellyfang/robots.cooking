@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import benderGif from "../images/bender.gif"
+import SEO from "../components/seo"
 
 export const query = graphql`
 {
@@ -20,6 +21,7 @@ export const query = graphql`
 export default ({ data }) => {
   return (
     <Layout>
+      <SEO />
       <div>
         <img src={benderGif} alt="logo" width="50%" />
         <h1>showing all robots cooking</h1>

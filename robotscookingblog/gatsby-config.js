@@ -43,6 +43,26 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_TRACKIKNG_ID
+      }
+    },
+    {
+      resolve: `gatsby-plugin-facebook-analytics`,
+      options: {
+        appId: process.env.FACEBOOK_APP_ID,
+        // Include facebook analytics in development.
+        // Defaults to false meaning the library will only be loaded in production.
+        includeInDevelopment: false,
+        // Include debug version of sdk
+        // Defaults to false meaning the library will load sdk.js
+        debug: false,
+        // Can select your language, default will load english
+        language: "en_US"
+      }
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
