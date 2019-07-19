@@ -11,8 +11,9 @@ export default ({ data }) => {
     const post = data.airtable.data
     return (
         <Layout>
-            <SEO
+            <SEO 
                 title={post.title}
+                description="hello world"
             />
             <div>
                 <div class="videoWrapper">

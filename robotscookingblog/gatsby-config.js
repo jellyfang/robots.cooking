@@ -2,10 +2,13 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: ``,
-    description: ``,
-    keywords: ``,
-    author: ``,
+    title: `robots cooking`,
+    description: `all the robots cooking stuff`,
+    keywords: `robots, cooking`,
+    author: `https://robots.cooking`,
+    lang: `en`,
+    url: `https://robots.cooking`,
+    image: `https://robots.cooking/img.jpg`
   },
   plugins: [
     {

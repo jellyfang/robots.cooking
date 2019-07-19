@@ -15,7 +15,7 @@
 - [x] react player (0.5 day)
 - [x] fixed css (0.5 day)
 - [x] env variables (0.25 day)
-- [ ] metatags, seo
+- [x] metatags, seo
 - [x] analytics https://www.edwardbeazer.com/setting-up-analytics-in-gatsbyjs/
 - [ ] multiple table linking
 - [ ] drop in tailwind css
