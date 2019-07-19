@@ -5,7 +5,7 @@ import unified from 'unified'
 import markdown from 'remark-parse'
 import html from 'remark-html'
 import ReactPlayer from 'react-player'
-import SEO from '../components/seo';
+import SEO from '../components/seo/seo';
 
 export default ({ data }) => {
     const post = data.airtable.data

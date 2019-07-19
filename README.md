@@ -16,7 +16,7 @@
 - [x] fixed css (0.5 day)
 - [x] env variables (0.25 day)
 - [ ] metatags, seo
-- [ ] analytics https://www.edwardbeazer.com/setting-up-analytics-in-gatsbyjs/
+- [x] analytics https://www.edwardbeazer.com/setting-up-analytics-in-gatsbyjs/
 - [ ] multiple table linking
 - [ ] drop in tailwind css
 - [ ] design https://www.figma.com/file/GJ1WD7JxUhBDPMHiaIh0qAyW/robots.cooking
@@ -25,6 +25,7 @@
 - [ ] form submission
 - [ ] dynamic https://blog.hasura.io/building-a-dynamic-listing-web-app-with-pagination-and-dynamic-pages-using-gatsby-2ddee9ec2dc3/
 - [ ] netlify functions https://www.gatsbyjs.org/blog/2018-12-17-turning-the-static-dynamic/
+- [ ] privacy policy https://www.privacypolicygenerator.info
 
 ## dev notes
 
@@ -35,7 +36,7 @@
 - part 5: metatags and seo and analytics
 - part 6: stripe checkout and shopify
 - part 7: user signup and auth
-- part 8: scaling
+- part 8: production deploy and scaling
 
 ## build notes
 
