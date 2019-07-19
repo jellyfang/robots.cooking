@@ -1,10 +1,10 @@
 const path = require(`path`)
 
-exports.onCreateNode = ({ node }) => {
-    if (node.internal.type === `Airtable`) {
-        console.log(node.internal.type)
-    }
-}
+// exports.onCreateNode = ({ node }) => {
+//     if (node.internal.type === `Airtable`) {
+//         console.log(node.internal.type)
+//     }
+// }
 
 exports.createPages = ({graphql, actions}) => {
     const { createPage } = actions

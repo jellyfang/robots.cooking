@@ -2,9 +2,10 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `robots cooking`,
+    title: ``,
     description: ``,
-    author: `robots.cooking`,
+    keywords: ``,
+    author: ``,
   },
   plugins: [
     {
@@ -13,12 +14,16 @@ module.exports = {
         apiKey: process.env.AIRTABLE_API_KEY,
         tables: [
           {
-            baseId: `app8fDw1VfF3RiVyi`,
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: `site`,
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
             tableName: `robots`,
             tableLinks: ["companies"]
           },
           {
-            baseId: `app8fDw1VfF3RiVyi`,
+            baseId: process.env.AIRTABLE_BASE_ID,
             tableName: `companies`,
             tableLinks: ["robots"]
           }
