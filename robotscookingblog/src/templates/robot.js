@@ -23,6 +23,13 @@ export default ({ data }) => {
                 <h2 className="subtitle">{post.subtitle || ''}</h2>
                 <h3 className="metadata">{post.cuisine || ''} in {post.location || ''}</h3>
                 {/* <img src={post.image[0].url || ''} /> */}
+                <div style={{backgroundColor: '#E9573F'}}>
+                    {post.company[0].data.name} 
+                    {post.company[0].data.website} 
+                    {post.company[0].data.email} 
+                    {post.company[0].data.location} 
+                    {post.company[0].data.country} 
+                </div>
                 <div
                     className="blog-post-content"
                     dangerouslySetInnerHTML={{
@@ -50,25 +57,28 @@ export const query = graphql`
         ) {
             data {
                 title
-                content
-                country
-                cuisine
-                email
-                images {
-                  url
-                }
-                location
-                postDate
-                robots {
-                  id
+                subtitle
+                company {
+                    data {
+                        name
+                        website
+                        email
+                        location
+                        country
+                    }
                 }
                 slug
-                status
-                subtitle
-                video2
+                cuisine
+                location
                 videos
-                website
-              }
+                video2
+                images {
+                    url
+                }
+                content
+                submissionDate
+                postDate
+            }
         }
     }
 `

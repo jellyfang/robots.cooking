@@ -22,12 +22,12 @@ module.exports = {
           },
           {
             baseId: process.env.AIRTABLE_BASE_ID,
-            tableName: `robots`,
-            tableLinks: ["companies"]
+            tableName: "robots",
+            tableLinks: ["company"]
           },
           {
             baseId: process.env.AIRTABLE_BASE_ID,
-            tableName: `companies`,
+            tableName: "companies",
             tableLinks: ["robots"]
           }
         ]
