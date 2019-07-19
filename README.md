@@ -18,7 +18,7 @@
 - [x] metatags, seo
 - [x] analytics https://www.edwardbeazer.com/setting-up-analytics-in-gatsbyjs/
 - [x] multiple table linking
-- [ ] drop in tailwind css
+- [ ] drop in tailwind css https://dev.to/jakedohm_34/using-tailwind-with-gatsby-js-10fj
 - [ ] design https://www.figma.com/file/GJ1WD7JxUhBDPMHiaIh0qAyW/robots.cooking
 - [ ] list view https://blog.usejournal.com/building-highly-performant-masonry-layouts-with-gatsby-js-54115acc3e72
 - [ ] detail view
