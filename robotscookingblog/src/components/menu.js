@@ -7,37 +7,37 @@ function Menu() {
 
     return (
     <>
-        <ul className="flex">
-            <li className="flex-2 mr-2">
+        <ul className="inline-flex">
+            <li className="">
                 <Link
                     to="/"
-                    className="text-center block py-2 px-4 text-white text-xs uppercase"
+                    className="px-4 text-white text-xs uppercase"
                 >
                     All Robots
                 </Link>
             </li>
-            <li className="flex-2 mr-2">
+            <li className="">
                 <Link
                     to="/"
-                    className="text-center block py-2 px-4 text-white text-xs uppercase"
+                    className="px-4 text-white text-xs uppercase"
                 >
                     Add new robot
                 </Link>
             </li>
-            <li className="flex-2 mr-2">
+            <li className="">
                 <Link
                     to="/"
-                    className="text-center block py-2 px-4 text-white text-xs uppercase"
+                    className="px-4 text-white text-xs uppercase"
                 >
                     About
                 </Link>
             </li>
-            <li className="text-center flex-1 visible xs:invisible">
+            <li className="">
                 <Link
                     to="/"
-                    className="block py-2 px-4 text-white text-xs uppercase"
+                    className="px-4 text-white text-xs uppercase"
                 >
-                    Twitter
+                    Subscribe
                 </Link>
             </li>
         </ul>
