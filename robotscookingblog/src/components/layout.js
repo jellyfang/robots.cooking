@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 // import "./layout.css"
 import '../css/global.css'
 
@@ -30,11 +31,11 @@ const Layout = ({ children }) => {
         siteTitle={data.site.siteMetadata.title} 
       />
       
-      <main className="bg-gray-300 flex flex-col flex-1 md:justify-center max-w-4xl mx-auto px-4 py-8 md:p-8 w-full">
+      <main className="bg-gray-300 flex flex-col flex-1 md:justify-center max-w-full mx-auto px-4 py-8 md:p-8 w-full">
         {children}
       </main>
-      
-      <footer />
+
+      <Footer />
     </div>
   )
 }

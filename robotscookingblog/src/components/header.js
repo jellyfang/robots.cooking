@@ -12,7 +12,7 @@ function Header({ siteTitle }) {
         <Link to="/" className="flex items-center no-underline text-white">
             <Logo />
           {/* {siteTitle} */}
-        </Link>
+        </Link><br/>
         <Menu />
       </div>
     </nav>
