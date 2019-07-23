@@ -5101,6 +5101,20 @@ gatsby-page-utils@^0.0.2:
     micromatch "^3.1.10"
     slash "^1.0.0"
 
+gatsby-plugin-facebook-analytics@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-facebook-analytics/-/gatsby-plugin-facebook-analytics-2.2.3.tgz#9f94d15833989c60f1918dded7651f614a42bf18"
+  integrity sha512-RbbZCQSD8QwTPw734zCILzC8BybDr9oaLK31/aG1C7bYrkkuTdOPU4tm1cUPq+vQQjIvKc+ZdvffPQxDh3jEqw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+gatsby-plugin-google-analytics@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.4.tgz#f0b64900e125cef03e930332c45063ece8263206"
+  integrity sha512-TyCazAUVMfMy6U/dHtXYLg9FTS7PtOBrRZkpp0Pdqe2M9qA10xG54JZpjJcLGUkZr5oeZPjNAvoiVyatrTcWiw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-google-fonts@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-1.0.1.tgz#d71054f7bf207b9a8da227380369e18e6f4e0201"
