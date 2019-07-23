@@ -9,8 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import Twitter from './Twitter';
-import Facebook from './Facebook';
+import Twitter from './twitter';
+import Facebook from './facebook';
 
 function SEO({ 
   title, 
