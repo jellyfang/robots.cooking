@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gatsby-plugin-postcss": "^2.1.2"
+  }
+}
