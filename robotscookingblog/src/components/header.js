@@ -7,9 +7,9 @@ import Logo from "./logo"
 function Header({ siteTitle }) {
   
   return (
-    <nav className="bg-gray-800 font-mono">
+    <nav className="bg-white font-mono">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center no-underline text-white">
+        <Link to="/" className="flex items-center no-underline">
           <Logo />
           {/* {siteTitle} */}
         </Link>

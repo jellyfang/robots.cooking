@@ -26,15 +26,15 @@ export default ({ data }) => {
     <Layout>
       <SEO />
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-10 flex justify-center">
-          <img className="max-w-3xl rounded" src={heroImg} alt="logo" />
+        <div className="container mx-auto flex justify-center">
+          <img className="max-w-3xl rounded -mb-32" src={heroImg} alt="logo" />
           {/* <h1 className="text-2xl uppercase mt-8">Showing all robots cooking</h1>
           <small className="text-gray-500 italic">Last updated July 4, 2019</small> */}
         </div>
       </section>
 
       <section className="container mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-center uppercase mb-8 font-mono">
+        <h2 className="text-4xl font-bold text-center uppercase mt-20 mb-8 font-mono">
           Showing all robots
         </h2>
         <ul className="flex flex-wrap">
