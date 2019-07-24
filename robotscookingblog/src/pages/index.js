@@ -27,7 +27,7 @@ export default ({ data }) => {
       <SEO />
       <section className="py-20 bg-white">
         <div className="container mx-auto flex justify-center">
-          <img className="max-w-3xl rounded -mb-32" src={heroImg} alt="logo" />
+          <img className="w-lg rounded -mb-48" src={heroImg} alt="logo" />
           {/* <h1 className="text-2xl uppercase mt-8">Showing all robots cooking</h1>
           <small className="text-gray-500 italic">Last updated July 4, 2019</small> */}
         </div>

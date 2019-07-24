@@ -76,7 +76,11 @@ export default ({ data }) => {
                     {robot.company[0].data.email} <br/>
                     {robot.company[0].data.location} {robot.company[0].data.country}
                 </div>
-                
+
+                <style dangerouslySetInnerHTML={{__html: `
+                        p { margin-bottom: 1em }
+                        `}} />
+
                 <div
                     className="text-lg leading-loose tracking-tighter ml-20 mr-20"
                     dangerouslySetInnerHTML={{
