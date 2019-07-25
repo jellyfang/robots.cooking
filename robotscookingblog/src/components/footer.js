@@ -11,7 +11,7 @@ function Footer() {
                 <ul className="inline-flex">
                     <li className="">
                         <Link
-                            to="/"
+                            to="/privacy"
                             className="text-sm text-blue-500 hover:text-blue-800 uppercase mr-10"
                         >
                             Privacy
@@ -19,7 +19,7 @@ function Footer() {
                     </li>
                     <li className="">
                         <Link
-                            to="/"
+                            to="/colophon"
                             className="text-sm text-blue-500 hover:text-blue-800 uppercase"
                         >
                             Colophon

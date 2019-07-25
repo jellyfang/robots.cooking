@@ -18,7 +18,7 @@ function Menu() {
             </li>
             <li className="">
                 <Link
-                    to="/"
+                    to="/new"
                     className="px-4 text-xs uppercase"
                 >
                     Add new robot
@@ -26,7 +26,7 @@ function Menu() {
             </li>
             <li className="">
                 <Link
-                    to="/"
+                    to="/about"
                     className="px-4 text-xs uppercase"
                 >
                     About
@@ -34,7 +34,7 @@ function Menu() {
             </li>
             <li className="">
                 <Link
-                    to="/"
+                    to="/subscribe"
                     className="px-4 text-xs uppercase"
                 >
                     Subscribe

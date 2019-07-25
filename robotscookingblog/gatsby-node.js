@@ -16,8 +16,12 @@ const wrapper = promise =>
 //     }
 // }
 
-const createAboutPage = () => {
+const createAboutPage = (createPage) => {
   console.log('creating about page')
+  // createPage({
+  //   path: "/about",
+  //   component: path.resolve(`./src/pages/about.js`)
+  // })
 }
 
 const createSubmitPage = () => {
@@ -78,7 +82,7 @@ exports.createPages = async ({graphql, actions}) => {
   )
 
   // Programmatically create pages with templates and helper functions
-  createAboutPage()
+  createAboutPage(createPage)
   createSubmitPage()
   createTOSPage()
   createRobotPages(result.data.allAirtable.edges, createPage)

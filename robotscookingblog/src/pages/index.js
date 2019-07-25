@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import benderGif from "../images/bender.gif"
 import heroImg from "../images/robots.cooking-hero.jpg"
 import SEO from "../components/seo/seo"
 import Subscribe from "../components/subscribe"
