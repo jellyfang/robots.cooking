@@ -23,10 +23,12 @@
 - [ ] privacy policy https://www.privacypolicygenerator.info
 - [x] list view https://scotch.io/tutorials/build-a-beautiful-landing-page-with-tailwind-css#toc-building-the-features-section
 - [x] detail view
-- [ ] form submission
+- [ ] subscribe page https://github.com/benjaminhoffman/gatsby-plugin-mailchimp
+- [x] form submission page
 - [x] design https://www.figma.com/file/GJ1WD7JxUhBDPMHiaIh0qAyW/robots.cooking
 - [ ] dynamic https://blog.hasura.io/building-a-dynamic-listing-web-app-with-pagination-and-dynamic-pages-using-gatsby-2ddee9ec2dc3/
 - [ ] netlify functions https://www.gatsbyjs.org/blog/2018-12-17-turning-the-static-dynamic/
+- [ ] feed page
 
 ## dev notes
 
