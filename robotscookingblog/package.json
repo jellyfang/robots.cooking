@@ -7,7 +7,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "gatsby": "^2.13.4",
-    "gatsby-cli": "^2.7.13",
+    "gatsby-cli": "^2.7.20",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-facebook-analytics": "^2.2.3",
     "gatsby-plugin-google-analytics": "^2.1.4",
@@ -29,6 +29,8 @@
     "react-player": "^1.11.1",
     "remark-html": "^9.0.1",
     "tailwindcss": "^1.0.5",
+    "tailwindcss-animatecss": "^0.1.0",
+    "typescript": "^3.5.3",
     "unified": "^8.0.1"
   },
   "devDependencies": {

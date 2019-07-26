@@ -67,7 +67,7 @@ export default class Subscribe extends React.Component {
         <div className="container mx-auto px-6 text-center py-20">
             {(() => {
                 if (this.state.subscribed) {
-                    return <h3 className="fadeIn">Thank you!</h3>
+                    return <h3>Thank you!</h3>
                 } else {
                     return <>
                     <h2 className="mb-4 text-3xl font-bold text-center text-orange-600">
