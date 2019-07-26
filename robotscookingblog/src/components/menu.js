@@ -32,14 +32,14 @@ function Menu() {
                     About
                 </Link>
             </li>
-            <li className="">
+            {/* <li className="">
                 <Link
                     to="/subscribe"
                     className="px-4 text-xs uppercase"
                 >
                     Subscribe
                 </Link>
-            </li>
+            </li> */}
         </ul>
         {/* <Link
             to="/"

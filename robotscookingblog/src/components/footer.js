@@ -8,7 +8,7 @@ function Footer() {
                 <div className="flex flex-wrap justify-between text-xs text-white">
                     2019 Robots Cooking
                 </div>
-                <ul className="inline-flex">
+                {/* <ul className="inline-flex">
                     <li className="">
                         <Link
                             to="/privacy"
@@ -25,7 +25,7 @@ function Footer() {
                             Colophon
                         </Link>
                     </li>
-                </ul>
+                </ul> */}
             </div>
         </nav>
     )
