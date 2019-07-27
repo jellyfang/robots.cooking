@@ -13,6 +13,9 @@ export const query = graphql`
           slug
           title
           location
+          hero {
+            url
+          }
         }
         recordId
       }
@@ -41,7 +44,7 @@ export default ({ data }) => {
             <li className="w-full md:w-1/3 px-2 mb-4" key={node.recordId}>
               <a href={node.data.slug}>
               <div className="bg-white rounded shadow">
-                <img className="" src="https://placehold.co/1200x610" alt="" />
+                <img className="" src={node.data.hero[0].url} alt="" />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl">{node.data.title}</div>
                   <p className="text-gray-600 text-base">{node.data.location}</p>
